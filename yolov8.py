@@ -2,7 +2,6 @@ from ultralytics import YOLO
 import cv2
 import time
 
-# Load YOLOv8 pretrained (có thể thay bằng yolov8n-face.pt nếu bạn có model fine-tuned)
 model = YOLO("yolov8n.pt")
 
 cap = cv2.VideoCapture(0)
