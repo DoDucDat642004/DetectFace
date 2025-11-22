@@ -30,7 +30,7 @@ def load_image(path):
     img = Image.open(path).convert("RGB")
     return transforms_image(img).unsqueeze(0)  # thêm batch dimension
 
-
+@torch.inference_mode()
 def predict_from_image(model, image, image_tensor=False):
     if image_tensor:
         img_tensor = image
@@ -39,13 +39,14 @@ def predict_from_image(model, image, image_tensor=False):
         image_path = image
         img_tensor = load_image(image_path)
         img_tensor = img_tensor.to(device)
+    
+    # Dự đoán
+    model.eval()
+    outputs = model(img_tensor)
 
-    with torch.no_grad():
-        outputs = model(img_tensor)
-
-        pred_gender = outputs["gender"].argmax(dim=1).item()
-        pred_race   = outputs["race"].argmax(dim=1).item()
-        pred_age    = outputs["age"].argmax(dim=1).item()
+    pred_gender = outputs["gender"].argmax(dim=1).item()
+    pred_race   = outputs["race"].argmax(dim=1).item()
+    pred_age    = outputs["age"].argmax(dim=1).item()
 
     return {
         "gender": idx_to_gender[pred_gender],
@@ -53,7 +54,7 @@ def predict_from_image(model, image, image_tensor=False):
         "age": idx_to_age[pred_age],
     }
 
-
+@torch.inference_mode()
 def predict_from_url(model, url, show_image=True):
     try:
         # --- Gửi request ---

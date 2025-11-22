@@ -37,7 +37,7 @@ def analyze_people(people_data):
     print("\n==== THỐNG KÊ THEO NGƯỜI ====")
 
     if not people_data:
-        print("⚠️ Không có người nào được ghi nhận.")
+        print("Không có người nào được ghi nhận.")
         return
 
     # Tạo tóm tắt dữ liệu
@@ -50,7 +50,7 @@ def analyze_people(people_data):
         summary["Age"].append(Counter(data["age"]).most_common(1)[0][0])
 
     total_people = len(people_data)
-    print(f"👥 Tổng số người phát hiện: {total_people}")
+    print(f"Tổng số người phát hiện: {total_people}")
 
     sns.set_theme(style="whitegrid")
     plt.rcParams.update({
@@ -141,6 +141,6 @@ def analyze_people(people_data):
     # =============================
     # 3️⃣ LƯU DỮ LIỆU JSON
     # =============================
-    with open("people_summary.json", "w", encoding="utf-8") as f:
+    with open("./output/people_summary.json", "w", encoding="utf-8") as f:
         json.dump(summary, f, ensure_ascii=False, indent=2)
-    print("Dữ liệu thống kê đã lưu tại: people_summary.json")
+    print("Dữ liệu thống kê đã lưu tại: ./output/people_summary.json")
