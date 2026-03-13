@@ -1,0 +1,7 @@
+emotion,emotion_conf,gender,race,age,timeline
+neutral,0.9649845957756042,Male,Asian,20-29,"{'frame': 1, 'time': 1.0, 'person_id': 1, 'emotion': 'neutral', 'confidence': 0.9649845957756042}"
+happy,0.9616115689277649,Male,Asian,10-19,"{'frame': 2, 'time': 2.0, 'person_id': 1, 'emotion': 'neutral', 'confidence': 0.9616115689277649}"
+happy,0.9617052674293518,Male,Asian,20-29,"{'frame': 3, 'time': 3.0, 'person_id': 1, 'emotion': 'neutral', 'confidence': 0.9617052674293518}"
+happy,0.9563215970993042,Male,Asian,10-19,"{'frame': 4, 'time': 4.0, 'person_id': 1, 'emotion': 'neutral', 'confidence': 0.9563215970993042}"
+happy,0.9565523266792297,Male,Asian,30-39,"{'frame': 5, 'time': 5.0, 'person_id': 1, 'emotion': 'neutral', 'confidence': 0.9565523266792297}"
+neutral,0.9561887979507446,Male,Asian,20-29,"{'frame': 6, 'time': 6.0, 'person_id': 1, 'emotion': 'neutral', 'confidence': 0.9561887979507446}"

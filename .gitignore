@@ -1,0 +1,37 @@
+
+# Bỏ qua bytecode ở mọi thư mục con
+__pycache__/
+*.py[cod]
+*$py.class
+
+# MÔI TRƯỜNG ẢO (Virtual Env)
+venv/
+.venv/
+env/
+.env/
+my_env/
+
+# IDEs & Editors
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# LOGS & DEBUG
+logs/
+*.log
+
+# DATA & OUTPUT 
+output/**/*.mp4
+input/**/*.mp4
+*.mp4
+
+
+# ENVIRONMENT VARIABLES
+.env
+.env.local
+.env.*.local
+
+# REQUIREMENTS
+requirements.txt.bakoutput/
